@@ -18,10 +18,15 @@ nav:
   fixed: false
 
 menu:
-  # Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  列表||fas fa-list:
+    音乐: /music/ || fas fa-music
+    电影: /movies/ || fas fa-video
+    友链: /link/ || fas fa-link
+  关于: /about/ || fas fa-heart
 
 # --------------------------------------
 # Code Blocks Settings
@@ -29,11 +34,11 @@ menu:
 
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
-  theme: light
-  macStyle: false
+  theme: darker
+  macStyle: true
   # Code block height limit (unit: px)
   height_limit: false
-  word_wrap: false
+  word_wrap: true
 
   # Toolbar
   copy: true
@@ -46,17 +51,17 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  fab fa-github: https://github.com/Glacial-Acetic-Acid || Github || '#24292e'
+  fas fa-envelope: mailto:dapaoz36@gmail.com || Email || '#4a7dbe'
 
 # --------------------------------------
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: /img/favicon-2026-7-2.png
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: /img/avatar.png
   effect: false
 
 # Disable all banner images
@@ -66,7 +71,7 @@ disable_top_img: false
 default_top_img:
 
 # The banner image of index page
-index_img:
+index_img: /img/home-cover.png
 
 # The banner image of archive page
 archive_img:
@@ -88,12 +93,12 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: false
+footer_img: true
 
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
-background:
+background: /img/background3.jpg
 
 cover:
   # Disable the cover or not
@@ -102,7 +107,8 @@ cover:
   archives_enable: true
   # When cover is not set, the default cover is displayed
   default_cover:
-    # - xxx.jpg
+    /img/home-cover.png
+
 
 # Replace Broken Images
 error_img:
@@ -119,11 +125,11 @@ post_meta:
   # Home Page
   page:
     # Choose: created / updated / both
-    date_type: created
+    date_type: both
     # Choose: date / relative
-    date_format: date
+    date_format: relative
     categories: true
-    tags: false
+    tags: true
     label: true
   post:
     # Choose: left / center
@@ -131,7 +137,7 @@ post_meta:
     # Choose: created / updated / both
     date_type: both
     # Choose: date / relative
-    date_format: date
+    date_format: relative
     categories: true
     tags: true
     label: true
@@ -149,7 +155,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -165,6 +171,8 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - 记录学习、折腾与生活里的小发现
+    - 保持好奇，慢慢生长
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -242,7 +250,7 @@ post_pagination: 1
 
 # Displays outdated notice for a post
 noticeOutdate:
-  enable: false
+  enable: true
   # Style: simple / flat
   style: flat
   # When will it be shown
@@ -264,7 +272,7 @@ footer:
   copyright:
     enable: true
     version: true
-  custom_text:
+  custom_text: '愿我们都能在复杂世界里保持清醒、好奇与热爱。<br><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> × <a target="_blank" rel="noopener" href="https://butterfly.js.org/">Butterfly</a> | <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'
 
 # --------------------------------------
 # Aside Settings
@@ -289,10 +297,17 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/Glacial-Acetic-Acid
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: >-
+      <div style="text-align:center">
+        欢迎来到 ChromaticFox2001 的博客<br>
+        记录学习、折腾与生活里的小发现<br>
+        <a href="https://github.com/Glacial-Acetic-Acid" target="_blank" rel="noopener">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:dapaoz36@gmail.com">Email</a>
+      </div>
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -387,7 +402,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
   start:
   end:
@@ -424,12 +439,12 @@ copy:
   enable: true
   # Add the copyright information after copied content
   copyright:
-    enable: false
-    limit_count: 150
+    enable: true
+    limit_count: 50
 
 # Need to install the hexo-wordcount plugin
 wordcount:
-  enable: false
+  enable: true
   # Display the word count of the article in post meta
   post_wordcount: true
   # Display the time to read the article in post meta
@@ -474,7 +489,7 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
+  use: local_search
   placeholder:
 
   # Algolia Search
@@ -793,7 +808,7 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -984,10 +999,12 @@ note:
 
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   # Exclude the specified pages from pjax, such as '/music/'
   exclude:
     # - /xxxxxx/
+    - /music/
+    - /no-pjax/
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
