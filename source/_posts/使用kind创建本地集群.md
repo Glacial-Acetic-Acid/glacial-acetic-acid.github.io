@@ -19,6 +19,7 @@ keywords:
   - kubeconfig
   - kubeadm
 toc: true
+toc_number: false
 ---
 
 > 本文是《K8s学习记录》系列第 02 篇。[返回系列目录](/k8s-learning-notes/) · [上一章：Kubernetes 解决了什么问题](/k8s-01-why-kubernetes/)

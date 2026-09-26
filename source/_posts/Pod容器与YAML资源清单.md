@@ -20,6 +20,7 @@ keywords:
   - kubectl exec
   - Pod 故障排查
 toc: true
+toc_number: false
 ---
 
 > 本文是《K8s学习记录》系列第 03 篇。[返回系列目录](/k8s-learning-notes/) · [上一章：使用 kind 创建本地集群](/k8s-02-kind-cluster/)
